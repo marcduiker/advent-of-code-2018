@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace AdventOfCode2018
 {
@@ -6,11 +7,11 @@ namespace AdventOfCode2018
     {
         static void Main(string[] args)
         {
-            var input = @"C:\dev\git\personal\advent-of-code-2018\input\day02.txt";
+            var input = @"C:\dev\git\personal\advent-of-code-2018\input\day06.txt";
 
-            var day = new Day02();
-            string result =  day.GetMatchingCharacters(input);
-
+            var day = new Day06();
+            var result = day.CalculateLargestAreaSizeNearPointsWithinRange(input, 10000);
+            
             Console.WriteLine(result);
             Console.ReadKey();
         }
