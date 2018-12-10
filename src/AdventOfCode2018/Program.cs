@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.IO;
 
 namespace AdventOfCode2018
 {
@@ -7,12 +7,14 @@ namespace AdventOfCode2018
     {
         static void Main(string[] args)
         {
-            var input = @"C:\dev\git\personal\advent-of-code-2018\input\day08.txt";
+            var dayFile = "day10.txt";
+            var input = Path.Combine(@"C:\dev\git\personal\advent-of-code-2018\input\", dayFile);
 
-            var day = new Day08();
-            var result = day.CalculateRoot(input);
+            var day = new Day10();
             
-            Console.WriteLine(result);
+            day.GetMessage(input);
+
+            //Console.WriteLine(result.ToString());
             Console.ReadKey();
         }
     }
